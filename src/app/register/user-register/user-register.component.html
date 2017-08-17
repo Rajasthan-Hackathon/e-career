@@ -1,0 +1,108 @@
+<div>
+    <label for="name">Full Name</label>
+    <input id="name" name="name" />
+</div>
+
+<div>
+    <label for="edu">Education</label>
+    <select [(ngModel)]="edu" name="edu" id="edu">
+      <option value="NA">Select from below</option>
+      <option value="ne">Not Educated</option>
+      <option value="ssc">S.S.C.</option>
+      <option value="hsc">H.S.C.</option>
+      <option value="g">Graduate</option>
+      <option value="pg">Post Graduate</option>
+    </select>
+</div>
+<div *ngIf="edu == ne">
+
+</div>
+<hr>
+<!-- Educational details gathering -->
+
+<div *ngIf="edu == ssc">
+
+    <div>
+        <label for="ssc_marks">Marks Obtained in SSC</label>
+        <input type="text" id="ssc_marks" name="ssc_marks" /> (in %)
+    </div>
+
+</div>
+
+<div *ngIf="edu == hsc">
+    <label for="ssc_marks">Marks Obtained in SSC</label>
+    <input type="text" id="ssc_marks" name="ssc_marks" /> (in %)
+</div>
+
+<div *ngIf="edu == g">
+    <div>
+        <label for="ssc_marks">Marks Obtained in SSC</label>
+        <input type="text" id="ssc_marks" name="ssc_marks" /> (in %)
+    </div>
+
+    <div>
+        <label for="hsc_marks">Marks Obtained in HSC</label>
+        <input type="text" id="hsc_marks" name="hsc_marks" /> (in %)
+    </div>
+
+</div>
+
+<div *ngIf="edu == pg">
+    <div>
+        <label for="ssc_marks">Marks Obtained in SSC</label>
+        <input type="text" id="ssc_marks" name="ssc_marks" /> (in %)
+    </div>
+    <div>
+        <label for="hsc_marks">Marks Obtained in HSC</label>
+        <input type="text" id="hsc_marks" name="hsc_marks" /> (in %)
+    </div>
+    <div>
+        <label for="g_marks">Aggregate Percentile in Graduation</label>
+        <input type="text" id="g_marks" name="g_marks" /> (in GP)
+    </div>
+    <div>
+        <label for="pg_marks">Aggregate Percentile in Post Graduation</label>
+        <input type="text" id="pg_marks" name="pg_marks" /> (in GP)
+    </div>
+</div>
+<hr>
+<!-- Skill details gathering -->
+
+<div>
+    <div>
+        <label for="skills">Skills</label>
+        <input type="text" name="skills" id="skills">
+    </div>
+</div>
+
+<hr>
+<!-- Personal Details gathering -->
+
+<div>
+    <div>
+        <label for="dob">Date of Birth (DD/MM/YYYY)</label>
+        <input type="date" id="dob" name="dob" />
+    </div>
+
+    <div>
+        <label for="street">Street/Place</label>
+        <input type="text" id="street" name="street">
+    </div>
+
+    <div>
+        <label for="city">City</label>
+        <input type="text" id="city" name="city">
+    </div>
+
+    <div>
+        <label for="state">State</label>
+        <input type="text" id="state" name="state">
+    </div>
+</div>
+
+<div>
+    <div>
+        <label for="contact">Contact</label>
+        <input type="text" id="contact" name="contact">
+    </div>
+</div>
