@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { CoyRegisterComponent } from './coy-register/coy-register.component';
 
-import { RouterModule } from '@angular/router'
-import { TagInputModule } from "ngx-chips";
+import { RouterModule } from '@angular/router';
 
 const ROUTES = [
   {
@@ -18,7 +17,6 @@ const ROUTES = [
 @NgModule({
   imports: [
     CommonModule,
-    TagInputModule,
     RouterModule.forChild(ROUTES)
   ],
   declarations: [UserRegisterComponent, CoyRegisterComponent]

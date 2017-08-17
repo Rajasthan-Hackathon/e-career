@@ -167,15 +167,7 @@
 
                                     <div class="form-group label-floating">
                                         <label class="control-label">Skills</label>
-                                        <div>
-                                            <tag-input id="srt" [(ngModel)]="['mean']" [onlyFromAutocomplete]="true" (onTextChange)="call($event)" (onAdd)="onAdd($event, item.dname)" (onRemove)="onRemove($event, item.dname)">
-                                                <tag-input-dropdown [showDropdownIfEmpty]="true" [focusFirstElement]="true" [displayBy]="'name'" [identifyBy]="'$key'" [autocompleteItems]="requestAutocompleteItems | async">
-                                                    <ng-template let-item="item">
-                                                        {{ item.name }} : {{ item.desc }}
-                                                    </ng-template>
-                                                </tag-input-dropdown>
-                                            </tag-input>
-                                        </div>
+
                                     </div>
 
                                     <!-- Personal Details gathering -->

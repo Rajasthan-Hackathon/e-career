@@ -5,7 +5,6 @@ import { RouterModule, PreloadAllModules } from '@angular/router';
 import { AngularFireModule } from "angularfire2";
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { TagInputModule } from "ngx-chips";
 
 import { AppComponent } from './app.component';
 
