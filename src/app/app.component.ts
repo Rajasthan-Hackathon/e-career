@@ -13,6 +13,7 @@ export class AppComponent {
   items = ['Pizza', 'Pasta', 'Parmesan'];
 
 
+
   call(event) {
     console.log(event);
   }

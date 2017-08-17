@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database'
+import { AngularFireAuth } from 'angularfire2/auth'
+
 
 @Component({
   selector: 'app-user-profile',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: AngularFireDatabase, private au: AngularFireAuth) { }
 
   ngOnInit() {
   }
