@@ -7,9 +7,39 @@ import { CoyDashComponent } from './coy-dash/coy-dash.component';
 import { UserSkillSuggestionComponent } from './user-skill-suggestion/user-skill-suggestion.component';
 import { CoyPostJobComponent } from './coy-post-job/coy-post-job.component';
 
+import { RouterModule } from '@angular/router'
+
+
+const ROUTES = [
+  {
+    path: 'coy-dash', component: UserDashComponent
+  },
+
+  {
+    path: 'coy-post-job', component: CoyPostJobComponent
+  },
+
+  {
+    path: 'coy-profile', component: CoyProfileComponent
+  },
+
+  {
+    path: 'user-dash', component: UserDashComponent
+  },
+
+  {
+    path: 'user-profile', component: UserProfileComponent
+  },
+
+  {
+    path: 'user-skill-suggestion', component: UserSkillSuggestionComponent
+  }
+]
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(ROUTES)
   ],
   declarations: [UserProfileComponent, CoyProfileComponent, UserDashComponent, CoyDashComponent, UserSkillSuggestionComponent, CoyPostJobComponent]
 })
