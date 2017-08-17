@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Observable } from 'rxjs/Observable';
+import { AngularFireDatabase } from "angularfire2/database";
+import { TagInputModule } from 'ng2-tag-input';
 @Component({
   selector: 'app-user-register',
   templateUrl: './user-register.component.html',
@@ -13,14 +15,21 @@ export class UserRegisterComponent implements OnInit {
   private isHSC: boolean = false;
   private isG: boolean = false;
   private isPG: boolean = false;
-  constructor() { }
+  constructor(private db: AngularFireDatabase) { }
 
   ngOnInit() {
+
   }
 
-  public edu_filter(event) {
-    console.log(event);
-    switch (event.target.value) {
+  public requestAutocompleteItems = (text: string): Observable<any[]> => {
+    return this.db.list('/skills').map(x => {
+      return x;
+    })
+  };
+
+  public edu_filter(val) {
+    console.log(val);
+    switch (val) {
       case 'ne':
         this.isNE = true;
         this.isSSC = false;
