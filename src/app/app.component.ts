@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TagInputComponent } from 'ngx-chips'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  items = ['Pizza', 'Pasta', 'Parmesan'];
 }

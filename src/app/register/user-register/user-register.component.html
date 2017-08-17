@@ -11,7 +11,8 @@
             <a href="http://www.creative-tim.com">
                 <div class="logo-container">
                     <div class="logo">
-                        <img src="assets/img/logo.png" alt="Creative Tim Logo" rel="tooltip" title="<b>Material Kit</b> was Designed & Coded with care by the staff from <b>Creative Tim</b>" data-placement="bottom" data-html="true">
+                        <img src="assets/img/logo.png" alt="Creative Tim Logo" rel="tooltip" title="<b>Material Kit</b> was Designed & Coded with care by the staff from <b>Creative Tim</b>"
+                            data-placement="bottom" data-html="true">
                     </div>
                     <div class="brand" style="font-size: 25px;">
                         eCareer
@@ -94,7 +95,7 @@
             <div class="section landing-section">
                 <div class="row">
 
-
+                    <tag-input (ngModel)='items' [editable]='true' (onTagEdited)="onTagEdited($event)"></tag-input>
                     <div class="col-md-6 col-md-offset-3">
                         <div class="card card-signup">
                             <form class="form" method="" action="">

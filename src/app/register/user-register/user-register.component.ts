@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireDatabase } from "angularfire2/database";
-import { TagInputModule } from 'ng2-tag-input';
 @Component({
   selector: 'app-user-register',
   templateUrl: './user-register.component.html',
