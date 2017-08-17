@@ -12,10 +12,25 @@ export class UserDashComponent implements OnInit {
   private skills;
   constructor(private db: AngularFireDatabase, private au: AngularFireAuth) {
 
-    db.list('/user')
+
   }
 
   ngOnInit() {
+
+
+    this.au.authState.subscribe(res => {
+      if (res) {
+        this.db.list('/User', {
+          query: {
+            orderByChild: 'uid',
+            equalTo: this.au.auth.currentUser.uid
+          }
+        }).subscribe(res => {
+          this.skills = res[0].skills
+        })
+      }
+    })
+    console.log(this.au.auth.currentUser.uid);
   }
 
 }
