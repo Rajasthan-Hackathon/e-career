@@ -10,6 +10,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppComponent } from './app.component';
 
 import { ROUTES } from './app.routes'
+import { environment } from '../environments/environment'
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ROUTES } from './app.routes'
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot(ROUTES, {
       useHash: true,
       preloadingStrategy: PreloadAllModules
