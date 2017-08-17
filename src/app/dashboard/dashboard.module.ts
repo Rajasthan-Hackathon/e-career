@@ -32,9 +32,11 @@ const ROUTES = [
   {
     path: 'user-dash', component: UserDashComponent
   },
-
   {
     path: 'user-profile/:uid', component: UserProfileComponent
+  },
+  {
+    path: 'user-profile', component: UserProfileComponent
   },
 
   {
