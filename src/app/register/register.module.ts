@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from "@angular/forms";
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { CoyRegisterComponent } from './coy-register/coy-register.component';
 import { TagInputModule } from 'ngx-chips'
@@ -19,6 +20,7 @@ const ROUTES = [
   imports: [
     CommonModule,
     TagInputModule,
+    FormsModule,
     RouterModule.forChild(ROUTES)
   ],
   declarations: [UserRegisterComponent, CoyRegisterComponent]
