@@ -105,7 +105,6 @@ export class UserRegisterComponent implements OnInit {
 
   call(inp) {
     console.log(inp);
-
     this.subject.next(inp);
   }
 

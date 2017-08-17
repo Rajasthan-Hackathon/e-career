@@ -8,6 +8,11 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { TagInputModule } from 'ngx-chips';
 import { FormsModule } from '@angular/forms'
 
+import { RatingModule } from 'ngx-rating'
+
+import { MaterialModule } from "@angular/material";
+import '@angular/cdk'
+
 import { AppComponent } from './app.component';
 
 import { ROUTES } from './app.routes'
@@ -20,6 +25,8 @@ import { environment } from '../environments/environment'
   imports: [
     BrowserModule,
     FormsModule,
+    RatingModule,
+    MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot(ROUTES, {
       useHash: true,
