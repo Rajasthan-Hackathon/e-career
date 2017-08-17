@@ -3,11 +3,11 @@
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
             <a href="http://www.creative-tim.com">
                 <div class="logo-container">
                     <div class="logo">
@@ -26,43 +26,43 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="index.html" target="_self">
-								Home
-							</a>
+                Home
+              </a>
                 </li>
                 <li>
                     <a href="#" target="_self">
-								About Us
-							</a>
+                About Us
+              </a>
                 </li>
                 <li>
                     <a href="#" target="_self">
-								Individual
-							</a>
+                Individual
+              </a>
                 </li>
                 <li>
                     <a href="#" target="_self">
-								Companies
-							</a>
+                Companies
+              </a>
                 </li>
                 <li>
                     <a href="#" target="_self">
-								Government
-							</a>
+                Government
+              </a>
                 </li>
                 <li>
                     <a href="Contactus.html" target="_self">
-								Contact Us
-							</a>
+                Contact Us
+              </a>
                 </li>
                 <li>
                     <a href="login.html" target="_self">
-								Login In
-							</a>
+                Login In
+              </a>
                 </li>
                 <li>
                     <a href="register.html" target="_self">
-								Register
-							</a>
+                Register
+              </a>
                 </li>
 
 
@@ -94,10 +94,10 @@
             <div class="section landing-section">
                 <div class="row">
 
-                    <tag-input (ngModel)='items' [editable]='true' (onTagEdited)="onTagEdited($event)"></tag-input>
+
                     <div class="col-md-6 col-md-offset-3">
                         <div class="card card-signup">
-                            <form class="form" method="" action="">
+                            <form #userRegForm="ngForm" (ngSubmit)="register(userRegForm.value)" class="form" method="" action="">
                                 <div class="header header-primary text-center">
                                     <h4>Register With Aadhaar</h4>
 
@@ -107,109 +107,105 @@
 
                                     <div class="form-group label-floating">
                                         <label class="control-label">Full name</label>
-                                        <input type="text" class="form-control" id="name" name="name">
+                                        <input (ngModel)="name" type="text" class="form-control" id="name" name="name">
                                     </div>
                                     <div class="form-group label-floating">
                                         <label class="control-label">Email Id</label>
-                                        <input type="email" class="form-control" id="email" name="email">
+                                        <input (ngModel)="email" type="email" class="form-control" id="email" name="email">
                                     </div>
 
 
                                     <div class="dropdown">
                                         <label class="control-label">Education</label>
-                                        <a href="#" class="btn btn-simple dropdown-toggle" data-toggle="dropdown">
-											Select Your Education Status
-											<b class="caret"></b>
-										</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a (click)="edu_filter('ne')">Not Educated</a></li>
-                                            <li><a (click)="edu_filter('ssc')">S.S.C.</a></li>
-                                            <li><a (click)="edu_filter('hsc')">H.S.C.</a></li>
-                                            <li><a (click)="edu_filter('g')">Graduate</a></li>
-                                            <li><a (click)="edu_filter('pg')">Post Graduate</a></li>
-                                        </ul>
+                                        <select (ngModel)="edu" class="form-control" name="edu" id="edu" (change)="edu_filter($event.target.value)" placeholder="Select Your Education Status">
+                                          <option value="ne">Not Educated</option>
+                                          <option value="ssc">S.S.C.</option>
+                                          <option value="hsc">H.S.C.</option>
+                                          <option value="g">Graduate</option>
+                                          <option value="pg">Post Graduate</option>
+                                        </select>
                                     </div>
 
-
-
                                     <!-- Educational details gathering -->
+                                    <hr>
 
                                     <div *ngIf="isNE">
                                     </div>
-                                    <div *ngIf="isSSC">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Marks Obtained in SSC</label>
-                                            <input type="text" class="form-control" id="ssc_marks" name="ssc_marks">
+                                    <div *ngIf="isSSC ">
+                                        <div class="form-group label-floating ">
+                                            <label class="control-label ">Marks Obtained in SSC</label>
+                                            <input (ngModel)="ssc_marks" type="text " class="form-control " id="ssc_marks " name="ssc_marks ">
                                         </div>
                                     </div>
                                     <div *ngIf="isHSC">
 
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Marks Obtained in HSC</label>
-                                            <input type="text" class="form-control" id="hsc_marks" name="hsc_marks">
+                                        <div class="form-group label-floating ">
+                                            <label class="control-label ">Marks Obtained in HSC</label>
+                                            <input (ngModel)="hsc_marks" type="text " class="form-control " id="hsc_marks " name="hsc_marks ">
                                         </div>
 
                                     </div>
                                     <div *ngIf="isG">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Aggregate Percentile in Graduation</label>
-                                            <input type="text" class="form-control" id="g_marks" name="g_marks">
+                                        <div class="form-group label-floating ">
+                                            <label class="control-label ">Aggregate Percentile in Graduation</label>
+                                            <input (ngModel)="g_marks" type="text " class="form-control " id="g_marks " name="g_marks ">
                                         </div>
                                     </div>
-                                    <div *ngIf="isPG">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Aggregate Percentile in Post Graduation</label>
-                                            <input type="text" class="form-control" id="pg_marks" name="pg_marks">
+                                    <div *ngIf="isPG ">
+                                        <div class="form-group label-floating ">
+                                            <label class="control-label ">Aggregate Percentile in Post Graduation</label>
+                                            <input (ngModel)="pg_marks" type="text " class="form-control " id="pg_marks " name="pg_marks ">
                                         </div>
                                     </div>
 
                                     <!-- Skill details gathering -->
-
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">Skills</label>
-
+                                    <hr>
+                                    <div class="form-group label-floating ">
+                                        <label class="control-label ">Skills</label>
+                                        <tag-input [(ngModel)]="skills" name="skills" [onlyFromAutocomplete]="true" (onTextChange)="call($event)">
+                                            <tag-input-dropdown [showDropdownIfEmpty]="true" [focusFirstElement]="true" [displayBy]="'name'" [identifyBy]="'$key'" [autocompleteItems]="requestAutocompleteItems | async">
+                                                <ng-template let-item="item">
+                                                    {{ item.name }} : {{ item.desc }}
+                                                </ng-template>
+                                            </tag-input-dropdown>
+                                        </tag-input>
                                     </div>
 
                                     <!-- Personal Details gathering -->
 
-                                    <div class="form-group label-static">
-                                        <label class="control-label">Date of Birth</label>
-                                        <input type="text" class="datepicker form-control" value="03/12/2016" id="dob" name="dob" />
+                                    <div class="form-group label-static ">
+                                        <label class="control-label ">Date of Birth</label>
+                                        <input (ngModel)="dob" type="date" class="datepicker form-control" id="dob" name="dob " />
                                     </div>
 
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">Street/Place</label>
-                                        <input type="text" class="form-control" id="street" name="street">
+                                    <div class="form-group label-floating ">
+                                        <label class="control-label ">Street/Place</label>
+                                        <input (ngModel)="street" type="text " class="form-control " id="street " name="street ">
                                     </div>
 
 
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">City</label>
-                                        <input type="text" class="form-control" id="city" name="city">
+                                    <div class="form-group label-floating ">
+                                        <label class="control-label ">City</label>
+                                        <input (ngModel)="city" type="text" class="form-control " id="city " name="city ">
                                     </div>
 
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">State</label>
-                                        <input type="text" class="form-control" id="state" name="state">
+                                    <div class="form-group label-floating ">
+                                        <label class="control-label ">State</label>
+                                        <input (ngModel)="state" type="text " class="form-control " id="state " name="state ">
                                     </div>
 
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">Contact</label>
-                                        <input type="text" class="form-control" id="contact" name="contact">
+                                    <div class="form-group label-floating ">
+                                        <label class="control-label ">Contact</label>
+                                        <input (ngModel)="contact" type="text" class="form-control " id="contact " name="contact ">
                                     </div>
 
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">Set password for your account</label>
-                                        <input type="text" class="form-control" id="pass" name="pass">
+                                    <div class="form-group label-floating ">
+                                        <label class="control-label ">Set password for your account</label>
+                                        <input (ngModel)="pass" type="password" class="form-control" id="pass" name="pass">
                                     </div>
 
-                                    <button class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary ">Submit</button>
 
-
-
-                                </div>
-                                <div class="footer text-center">
-                                    <a href="#" class="btn btn-simple btn-primary btn-lg">Sign Up</a>
                                 </div>
                             </form>
                         </div>
@@ -223,34 +219,34 @@
 
     </div>
 
-    <footer class="footer">
-        <div class="container">
-            <nav class="pull-left">
+    <footer class="footer ">
+        <div class="container ">
+            <nav class="pull-left ">
                 <ul>
                     <li>
-                        <a href="http://www.creative-tim.com">
-	                            Creative Tim
-	                        </a>
+                        <a href="http://www.creative-tim.com ">
+                              Creative Tim
+                          </a>
                     </li>
                     <li>
-                        <a href="http://presentation.creative-tim.com">
-	                           About Us
-	                        </a>
+                        <a href="http://presentation.creative-tim.com ">
+                             About Us
+                          </a>
                     </li>
                     <li>
-                        <a href="http://blog.creative-tim.com">
-	                           Blog
-	                        </a>
+                        <a href="http://blog.creative-tim.com ">
+                             Blog
+                          </a>
                     </li>
                     <li>
-                        <a href="http://www.creative-tim.com/license">
-	                            Licenses
-	                        </a>
+                        <a href="http://www.creative-tim.com/license ">
+                              Licenses
+                          </a>
                     </li>
                 </ul>
             </nav>
-            <div class="copyright pull-right">
-                &copy; 2016, made with <i class="fa fa-heart heart"></i> by Creative Tim
+            <div class="copyright pull-right ">
+                &copy; 2016, made with <i class="fa fa-heart heart "></i> by Creative Tim
             </div>
         </div>
     </footer>
