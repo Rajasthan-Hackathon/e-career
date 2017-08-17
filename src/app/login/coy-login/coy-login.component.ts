@@ -16,7 +16,7 @@ export class CoyLoginComponent implements OnInit {
 
   signIn(user, pass) {
     this.af.auth.signInWithEmailAndPassword(user, pass).then(res => {
-      this.router.navigate(['/dashboard/coy']);
+      this.router.navigate(['/dashboard/company']);
     })
   }
 
