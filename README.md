@@ -1,28 +1,29 @@
 # ECareer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
+This project was developed under Rajasthan Hackathon held at Kota, Rajasthan.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Problem Statement
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+Due to lack of awareness in society, people such as Students, Professionals, Skilled Workers or maybe illiterate always miss opportunities which will not only help them at personal level but will contribute in development of society.
 
-## Build
+## Our Solution
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+One stop solution for Online Career Guidance & Skills Improvement tracker (for Students, Professionals, Skilled Workers) which is directly linked with the industry with the requirement of that skill. System continuously keeps guiding the user that how to improve a particular skill and it presents user with online resources, if available using Data Mining & AI. The complete system is connected with Aadhaar which makes it authentic. Also side-effect to this system will be a full-fledged API giving complete qualification background of any person registered with this system using their Aadhaar ID.
 
-## Running unit tests
+## Various Opportunities
+* The students will get guidance which is based on real statistics at almost no cost.
+* User can track his/her skill strengths which will be also available to common skill seeking industries.
+* Apart from students and professionals, people interested or have excelled in particular skills will get chance to directly interact with industries with same demands as their matching skills
+* Course recommendations from various online learning sites based on the current skills of user plus considering the market trends and requirements.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Future Prospects
+* The application is connected with Aadhaar and hence could be a standalone API for complete educational background of a Aadhaar holder.
+* Use of more statistical data to make the counselling more precise and decisive.
+* It can be used to upgrade syllabus in various institutes and Universities as well as it provides with the latest trends and market requirements.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Credits
+**DigiFest Rajasthan Hackathon August 2017**
