@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database'
+import { AngularFireAuth } from 'angularfire2/auth'
 
 @Component({
   selector: 'app-user-dash',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDashComponent implements OnInit {
 
-  constructor() { }
+  private skills;
+  constructor(private db: AngularFireDatabase, private au: AngularFireAuth) {
+
+    db.list('/user')
+  }
 
   ngOnInit() {
   }
