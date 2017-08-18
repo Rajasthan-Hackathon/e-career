@@ -10,6 +10,7 @@ import { AngularFireAuth } from 'angularfire2/auth'
 export class UserDashComponent implements OnInit {
 
   private skills;
+  private name;
   constructor(private db: AngularFireDatabase, private au: AngularFireAuth) {
 
 
@@ -26,6 +27,7 @@ export class UserDashComponent implements OnInit {
             equalTo: this.au.auth.currentUser.uid
           }
         }).subscribe(res => {
+          this.name = res[0].name
           this.skills = res[0].skills
         })
       }

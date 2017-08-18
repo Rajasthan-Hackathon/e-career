@@ -49,7 +49,7 @@ export class UserRegisterComponent implements OnInit {
       form.pass = null;
       form.uid = res.uid;
       this.db.list('User').push(form).then(x => {
-        this.router.navigate(['../login/user']);
+        this.router.navigate(['/login/user']);
       })
     })
   }
